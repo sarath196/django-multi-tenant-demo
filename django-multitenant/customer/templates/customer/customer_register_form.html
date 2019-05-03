@@ -1,0 +1,39 @@
+{% extends "base/__base.html" %}
+{% load widget_tweaks %}
+{% block title %}Login{% endblock %}
+
+{% block Content_Area %}
+     <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-12">
+     <form method=post>
+     {% csrf_token %}
+               <div class="panel panel-primary">
+               
+                        <div class="panel-heading">
+                           Login
+                        </div>
+
+                        <div class="panel-body">
+
+                        {% for form_set in form %}                            
+                            <div class="form-group">
+                                  <label>{{form_set.label}}</label>
+								  {% render_field form_set class+="form-control" placeholder=form_set.label %} 
+								  <div style="font-size: 12px; margin: 0px 250px; width:100%; color: blue;">.{{form_set.help_text}}</div>                       
+                             	  {{ form_set.errors }}
+                             </div>
+                         {% endfor %} 
+                            <div class="col-md-4 col-md-offset-4 ">
+                           <button type="submit" class="btn btn-info">Login</button>
+                           </div>
+                         </div>
+                         
+                           
+                        </div>
+                        </form> 
+                            </div>
+		
+		 
+ 
+  
+{% endblock Content_Area %} 
+

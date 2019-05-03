@@ -1,0 +1,36 @@
+div.parent {
+    position: relative;
+}
+
+input {
+    /* important */
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 18px; /* Change this if text wont align */
+    vertical-align: baseline;
+    /* end important */
+    margin: 0;
+    border: 0 solid #e0e0e0;
+    padding: 15px 10px;
+    width: 100%;
+    background: #eee;
+    font-weight: 300;
+}
+
+.ghost-text {
+    /* important */
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 18px; /* Change this if text wont align */
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* end important */
+    margin: 0;
+    border: 0;
+    padding: 15px 10px;
+    width: 100%;
+    background: none;
+    font-weight: 300;
+    color: #999999;
+}
